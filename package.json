@@ -1,17 +1,20 @@
 {
-  "name": "online-code-editor-react-nodejs",
+  "name": "code-editor-react",
   "version": "1.0.0",
-  "description": "Create an online code editor using React, Node.js, Express and Webpack.",
+  "description":
+    "Create an online code editor using React, Node.js, Express and Webpack.",
   "main": "src/server/index.js",
   "scripts": {
     "start": "node src/server/index.js",
-    "build": "API_HOST=https://online-code-editor-api.herokuapp.com webpack --env production ",
-    "client": "PORT=3000 webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "build":
+      "API_HOST=https://online-code-editor-api.herokuapp.com webpack --env production ",
+    "client":
+      "PORT=3000 webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Johnny",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
     "bootstrap-select": "^1.13.1",
