@@ -3,7 +3,7 @@ A full stack web application for online programming, built with React and Expres
 
 # Function
 This app is used to write code online. It supports 5 programming languages, e.g. c, c++, java, javascript and python.
-![image](/src/public/execute.png)
+![image](/public/execute.png)
 
 # Demo
 The [Live Demo](https://online-code-editor.herokuapp.com/) is hosted on Heroku.
