@@ -109,7 +109,6 @@ exports.loadEnv = url => ({
     new webpack.DefinePlugin({
       'process.env': {
         API_URL: JSON.stringify(url),
-        PUBLIC_URL: JSON.stringify('./public'),
       },
     }),
   ],
