@@ -19,10 +19,10 @@ npm run dev
 Access http://localhost:3000/ in web browser and click 'Code Editor' button, enjoy!
 
 # Deployment
-Read tutorial [Deploying Full Stack Node.js App to Heroku](http://jojozhuang.github.io/tutorial/react/deploying-full-stack-nodejs-app-to-heroku/) to deploy the React app to Heroku.
+Read tutorial [Deploying Full Stack Node.js App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-full-stack-nodejs-app-to-heroku/) to deploy the React app to Heroku.
 
 # Portfolio
-Read portfolio [Code Editor(React)](http://jojozhuang.github.io/portfolio/code-editor-react/) to learn the main functions of this code editor.
+Read portfolio [Code Editor(React)](https://jojozhuang.github.io/portfolio/code-editor-react/) to learn the main functions of this code editor.
 
 # Tutorial
-Read tutorial [Building Online Code Editor with React and Express](http://jojozhuang.github.io/tutorial/react/building-online-code-editor-with-react-and-express/) to learn how this online code editor is built.
+Read tutorial [Building Online Code Editor with React and Express](https://jojozhuang.github.io/tutorial/react/building-online-code-editor-with-react-and-express/) to learn how this online code editor is built.
