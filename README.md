@@ -9,6 +9,8 @@ This app is used to write code online. It supports 5 programming languages, e.g.
 # Demo
 The [Live Demo](https://online-code-editor.herokuapp.com/) is hosted on Heroku.
 
+And, another [Live Demo](https://code-editor-react.netlify.com/) is hosted on Netlify.
+
 # Setup Locally
 ```bash
 git clone https://github.com/jojozhuang/code-editor-react.git
@@ -19,7 +21,7 @@ npm run dev
 Access http://localhost:3000/ in web browser and click 'Code Editor' button, enjoy!
 
 # Deployment
-Read tutorial [Deploying Full Stack Node.js App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-full-stack-nodejs-app-to-heroku/) to deploy the React app to Heroku.
+Read tutorial [Deploying Full Stack React App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-full-stack-react-app-to-heroku/) to deploy the React app to Heroku.
 
 # Portfolio
 Read portfolio [Code Editor(React)](https://jojozhuang.github.io/portfolio/code-editor-react/) to learn the main functions of this code editor.
