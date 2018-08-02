@@ -14,7 +14,10 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "prod": "concurrently \"npm run server\" \"npm run client-prod\""
   },
-  "author": "Johnny",
+  "author": {
+    "name": "Rong Zhuang",
+    "email": "jojozhuang@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
