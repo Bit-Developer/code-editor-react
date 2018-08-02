@@ -33,6 +33,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// test to make sure everything is working (accessed at GET http://localhost:8080/api)
+app.get('/api', (req, res) => {
+  res.json({ message: 'Hello! welcome to our api!' });
+});
+
 app.get('/api/file/:lang', (req, res) => {
   const language = req.params.lang;
   console.log(language);
