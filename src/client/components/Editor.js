@@ -7,15 +7,22 @@ import OutputBox from './controls/OutputBox';
 import StatusImage from './controls/StatusImage';
 import CompilerApi from '../api/CompilerApi';
 
-const languages = ['C', 'C++', 'Java', 'JavaScript', 'Python'];
+let languages = ['JavaScript', 'Python', 'Java', 'C', 'C++'];
+const languagesProd = ['JavaScript', 'Python'];
 
 class Editor extends React.Component {
   constructor(props) {
     super(props);
+
+    console.log(('env', process.env.NODE_ENV));
+    if (process.env.NODE_ENV === 'production') {
+      languages = languagesProd;
+    }
+
     this.state = {
-      selectedLang: 2, // java
+      selectedLang: 0, // JavaScript
       task: {
-        lang: 'java',
+        lang: 'javascript',
         code: '',
       },
       response: {
@@ -31,7 +38,7 @@ class Editor extends React.Component {
   }
 
   componentDidMount() {
-    CompilerApi.getTask('java')
+    CompilerApi.getTask('javascript')
       // .then(res => res.json())
       .then((task) => {
         console.log(task);

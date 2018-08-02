@@ -7,7 +7,7 @@ exports.devServer = ({ host, port } = {}) => ({
     overlay: true,
     historyApiFallback: true,
     proxy: {
-      '/api': process.env.API_HOST,
+      '/api': process.env.API_URL,
     },
   },
 });
@@ -104,11 +104,11 @@ exports.loadStatic = () => ({
 
 const webpack = require('webpack');
 
-exports.loadEnv = ({ url }) => ({
+exports.loadEnv = url => ({
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        API_HOST: JSON.stringify(url),
+        API_URL: JSON.stringify(url),
         PUBLIC_URL: JSON.stringify('./public'),
       },
     }),

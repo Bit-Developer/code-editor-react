@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const webpack = require('webpack');
 
 const path = require('path');
 const glob = require('glob');
@@ -40,19 +39,13 @@ const commonConfig = merge([
         template: './public/index.html',
         favicon: './public/favicon.ico',
       }),
-
-      new webpack.DefinePlugin({
-        'process.env': {
-          API_HOST: JSON.stringify(process.env.API_HOST || 'http://localhost:8080'),
-          PUBLIC_URL: JSON.stringify('./public'),
-        },
-      }),
     ],
   },
 ]);
 
 const productionConfig = merge([
   parts.loadEnv('https://online-code-editor-api.herokuapp.com'),
+
   parts.extractCSS({
     use: 'css-loader',
   }),
@@ -78,7 +71,7 @@ const productionConfig = merge([
 ]);
 
 const developmentConfig = merge([
-  // parts.loadEnv('http://localhost:8080'),
+  parts.loadEnv('http://localhost:8080'),
   parts.devServer({
     // Customize host/port here if needed
     host: process.env.HOST,
