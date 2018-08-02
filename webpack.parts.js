@@ -88,6 +88,20 @@ exports.loadFonts = ({ include, exclude, options } = {}) => ({
   },
 });
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+exports.loadStatic = () => ({
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: './public/_redirects',
+        to: './_redirects',
+        toType: 'file',
+      },
+    ]),
+  ],
+});
+
 const webpack = require('webpack');
 
 exports.loadEnv = ({ url }) => ({

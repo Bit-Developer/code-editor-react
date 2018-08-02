@@ -52,7 +52,7 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
-  // parts.loadEnv('https://online-code-editor-api.herokuapp.com'),
+  parts.loadEnv('https://online-code-editor-api.herokuapp.com'),
   parts.extractCSS({
     use: 'css-loader',
   }),
@@ -74,6 +74,7 @@ const productionConfig = merge([
       publicPath: '../', // Take the directory into account
     },
   }),
+  parts.loadStatic(),
 ]);
 
 const developmentConfig = merge([
