@@ -7,9 +7,11 @@ This app is used to write code online. It supports 5 programming languages, e.g.
 <kbd>![image](/public/execute.png)</kbd>
 
 # Demo
-The [Live Demo](https://online-code-editor.herokuapp.com/) is hosted on Heroku.
+Two available demos:
+* `Live Demo on Netlify:` <a href="https://code-editor-react.netlify.com/" target="\_blank">https://code-editor-react.netlify.com/</a>
+* `Live Demo on Azure:` <a href="https://code-editor.azurewebsites.net/" target="\_blank">https://code-editor.azurewebsites.net/</a>
 
-And, another [Live Demo](https://code-editor-react.netlify.com/) is hosted on Netlify.
+*Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
 # Setup Locally
 ```bash

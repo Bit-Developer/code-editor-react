@@ -99,6 +99,13 @@ exports.loadStatic = () => ({
         toType: 'file',
       },
     ]),
+    new CopyWebpackPlugin([
+      {
+        from: './public/web.config',
+        to: './web.config',
+        toType: 'file',
+      },
+    ]),
   ],
 });
 
