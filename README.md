@@ -23,9 +23,9 @@ npm run dev
 Access http://localhost:3000/ in web browser and click 'Code Editor' button, enjoy!
 
 # Deployment
-Follow tutorial [Deploying Full Stack React App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-full-stack-react-app-to-heroku/) to deploy the React app to Heroku.
+Follow tutorial [Deploying Full Stack React App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-full-stack-react-app-to-heroku/) to deploy the React app to Heroku(RESTful API + Frontend React).
 
-Follow tutorial [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI](https://jojozhuang.github.io/tutorial/react/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci/) to continuously deploy this Full Stack app to Heroku and Netlify.
+Follow tutorial [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI](https://jojozhuang.github.io/tutorial/react/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci/) to continuously deploy this Full Stack app to Heroku(RESTful API) and Netlify(Frontend React).
 
 # Portfolio
 Read portfolio [Code Editor(React)](https://jojozhuang.github.io/portfolio/code-editor-react/) to learn the main functions of this code editor.
