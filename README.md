@@ -4,7 +4,7 @@ A full stack web application for online programming, built with React and Expres
 # Function
 This app is used to write code online. It supports 5 programming languages, e.g. c, c++, java, javascript and python.
 
-<kbd>![image](/public/execute.png)</kbd>
+<kbd>![image](/public/codeeditor.png)</kbd>
 
 # Demo
 Two available demos:
