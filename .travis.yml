@@ -22,4 +22,4 @@ deploy:
       secure: $HEROKU_API_KEY
     app: code-editor-react
 after_success:
-  - client_del.sh
+  - ./client_del.sh
