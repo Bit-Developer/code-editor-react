@@ -4,8 +4,10 @@
   "description": "Create an online code editor using React, Node.js, Express and Webpack.",
   "main": "src/server/index.js",
   "scripts": {
-    "start": "node src/server/index.js",
-    "build": "webpack --env production ",
+    "start2": "node src/server/index.js",
+    "start": "node server.js",
+    "build": "webpack --env production",
+    "postinstall": "npm run build",
     "client": "PORT=3000 webpack-dev-server --env development --devtool inline-source-map --hot",
     "client-prod": "PORT=3001 webpack-dev-server",
     "server": "nodemon src/server/index.js",
@@ -58,5 +60,9 @@
     "webpack-merge": "^4.2.1",
     "lodash": "^4.17.11",
     "fstream": "1.0.12"
+  },
+  "engines": {
+    "node": "9.4.0",
+    "npm": "6.9.0"
   }
 }
