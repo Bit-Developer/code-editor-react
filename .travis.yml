@@ -16,9 +16,10 @@ install:
 
 deploy:
   # deploy app as front end website
-  - provider: script
-    script: chmod +x client_del.sh
+  - provider: heroku
     skip_cleanup: true
     api-key:
       secure: $HEROKU_API_KEY
     app: code-editor-react
+after_success:
+  - client_del.sh
