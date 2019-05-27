@@ -20,3 +20,6 @@ deploy:
     api-key:
       secure: $HEROKU_API_KEY
     app: code-editor-react
+
+after_deploy:
+- bash ./client_del.sh
