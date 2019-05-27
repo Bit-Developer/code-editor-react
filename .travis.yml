@@ -8,6 +8,8 @@ branches:
   - master
 
 before_script:
+- echo "TRAVIS_BUILD_DIR"
+- echo $TRAVIS_BUILD_DIR
 # delete Procfile to let heroku run 'npm start'.
 - bash ./client_del.sh 
 
