@@ -16,7 +16,7 @@ install:
 
 deploy:
   # deploy app as front end website
-  - provider: heroku
+  - provider: script
     script: chmod +x client_del.sh
     skip_cleanup: true
     api-key:
