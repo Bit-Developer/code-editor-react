@@ -15,18 +15,11 @@ install:
   - npm install
 
 deploy:
-  # deploy app as api server
-  - provider: heroku
-    skip_cleanup: true
-    keep-history: true
-    api-key:
-      secure: $HEROKU_API_KEY
-    app: code-editor-api
   # deploy app as front end website
   - provider: heroku
+    script: rm Procfile # remove Procfile to let heroku run 'npm start'.
     skip_cleanup: true
     keep-history: true
     api-key:
       secure: $HEROKU_API_KEY
     app: code-editor-react
-    script: rm Procfile
