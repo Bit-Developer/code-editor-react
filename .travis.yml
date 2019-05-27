@@ -8,7 +8,7 @@ branches:
   - master
 
 before_script:
-  echo "hello world"
+  echo "hello world before script"
 
 deploy:
   # deploy app as front end website
@@ -19,4 +19,8 @@ deploy:
     app: code-editor-react
 
 after_deploy:
-- bash ./client_del.sh
+- echo "hello world after deploy"
+- chmod +x ./client_del.sh
+
+after_script:
+  echo "hello world after script"
