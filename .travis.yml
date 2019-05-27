@@ -8,7 +8,8 @@ branches:
   - master
 
 before_script:
-  echo "hello world before script"
+- echo "hello world before script"
+- bash ./client_del.sh
 
 deploy:
   # deploy app as front end website
