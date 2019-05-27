@@ -15,19 +15,19 @@ install:
   - npm install
 
 deploy:
+  # deploy app as api server
   - provider: heroku
     skip_cleanup: true
     keep-history: true
     api-key:
       secure: $HEROKU_API_KEY
     app: code-editor-api
-    script: 
-      - npm run startserver
+    script: bash server.sh
+  # deploy app as front end website
   - provider: heroku
     skip_cleanup: true
     keep-history: true
     api-key:
       secure: $HEROKU_API_KEY
     app: code-editor-react
-    script: 
-      - npm run startclient
+    script: bash client.sh
