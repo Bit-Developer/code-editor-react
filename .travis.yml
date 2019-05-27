@@ -8,8 +8,8 @@ branches:
   - master
 
 before_script:
-- echo "hello world before script"
-- bash ./client_del.sh
+# delete Procfile to let heroku run 'npm start'.
+- bash ./client_del.sh 
 
 deploy:
   # deploy app as front end website
@@ -18,10 +18,3 @@ deploy:
     api-key:
       secure: $HEROKU_API_KEY
     app: code-editor-react
-
-after_deploy:
-- echo "hello world after deploy"
-- chmod +x ./client_del.sh
-
-after_script:
-  echo "hello world after script"
