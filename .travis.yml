@@ -17,8 +17,7 @@ install:
 deploy:
   # deploy app as front end website
   - provider: heroku
-    script: 
-      - echo "hello"
+    script: echo "hello world2"
     skip_cleanup: true
     keep-history: true
     api-key:
