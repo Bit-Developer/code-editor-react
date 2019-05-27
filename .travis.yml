@@ -17,7 +17,8 @@ install:
 deploy:
   # deploy app as front end website
   - provider: heroku
-    script: rm Procfile # remove Procfile to let heroku run 'npm start'.
+    script: 
+      - rm Procfile # remove Procfile to let heroku run 'npm start'.
     skip_cleanup: true
     keep-history: true
     api-key:
