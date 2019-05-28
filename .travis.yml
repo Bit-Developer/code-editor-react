@@ -7,10 +7,6 @@ branches:
   only:
   - master
 
-before_deploy:
-# delete Procfile to let heroku run 'npm start' for client.
-- bash ./client_del.sh 
-
 deploy:
   # deploy app as api server
   - provider: heroku
@@ -26,5 +22,4 @@ deploy:
     app: code-editor-react
 
 after_deploy:
-# useless, just to see the echo result in the bash script.
-# - bash ./client_del.sh
+- bash ./client_del.sh
