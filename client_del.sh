@@ -1,5 +1,6 @@
 #!/bin/bash
 echo -e "\nReady to delete procfile \n"
+echo "DEPLOY_TIME" + $DEPLOY_TIME
 echo "TRAVIS_BUILD_DIR" + $TRAVIS_BUILD_DIR
 #CURR_DIR="/home/travis/build/jojozhuang/code-editor-react"
 CURR_DIR=$TRAVIS_BUILD_DIR

@@ -22,4 +22,7 @@ deploy:
     app: code-editor-react
 
 after_deploy:
+# change settings in Procfile for client
+# web: node src/server/index.js
+# web: node server.js
 - bash ./procfile_upd.sh
