@@ -27,4 +27,4 @@ deploy:
 
 after_deploy:
 # useless, just to see the echo result in the bash script.
-- bash ./client_del.sh
+# - bash ./client_del.sh
