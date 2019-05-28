@@ -22,4 +22,4 @@ deploy:
     app: code-editor-react
 
 after_deploy:
-- bash ./client_del.sh
+- bash ./procfile_upd.sh
