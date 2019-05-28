@@ -4,8 +4,7 @@
   "description": "Create an online code editor using React, Node.js, Express and Webpack.",
   "main": "src/server/index.js",
   "scripts": {
-    "startserver": "node src/server/index.js",
-    "startclient": "node server.js",
+    "start": "node src/server/index.js",
     "build": "webpack --env production",
     "postinstall": "npm run build",
     "client": "PORT=3000 webpack-dev-server --env development --devtool inline-source-map --hot",
