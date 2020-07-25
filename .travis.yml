@@ -12,13 +12,13 @@ deploy:
   - provider: heroku
     skip_cleanup: true
     api-key:
-      secure: $HEROKU_API_KEY
+      secure: bINpmhXzBWTweffDpCuSylQ6Or40/2wzbtcgkGJoRJeDGnMa8hhMPjTresCLMwT+AT1WTCpKfMqhsNDk55SntN6YN1l28z0f50lyFJoAOwfElvyIkQ5ToQE2HhHnwY+m+xI2gxgQkTTc/XnRLxxGNJMhDxJtMKch3cZcIylSz8foe90+H4huK5BS0wMcv+PWAJNeLlTR16LDP85opL+83UaWUSGWBTjwsAFzWncR5MESQvKPS70t1rFgOJ4IB3k6Ca5i0HKVAB1cUKcZTKOc91o9EIpR18g729fmrMbct8qCF24i4QKEaUPgPO/7ET0IgSkaNo4Y2JNYqZqXM/GsCZRkVtMxXQe6KiTkGQbj+AV13qYJtMCzgnDAWPmiKCzYbze0gyob+rDAa4S7Ja3Rsob5oHBhwpKhJlcXus/XgCaXJ+rnGW+LZf64gyoqUyMhWJZz0bOqrm58KdB5w8lvk6RpL7GN806qW4ljFZ49mO9TTSxSKRZw+FtOJWWs2+u8YJacAFCAXCOFpM6mROyIzQ+ExJFCXSPHm4fnSLLlcWN/b9B+NfiinPSrJ3Pz6oEFRHu6EFQWcjd8jZAT3WywvcE5AR10lxGpylrXiT9K0ZEbUeVu1eLsh6M15mAVp/+TgDmy0pHHAEMI+47if/U0VEgIX807iIpYt/xzL0aWtvQ=
     app: code-editor-api
   # deploy app as front end website
   - provider: heroku
     skip_cleanup: true
     api-key:
-      secure: $HEROKU_API_KEY
+      secure: bINpmhXzBWTweffDpCuSylQ6Or40/2wzbtcgkGJoRJeDGnMa8hhMPjTresCLMwT+AT1WTCpKfMqhsNDk55SntN6YN1l28z0f50lyFJoAOwfElvyIkQ5ToQE2HhHnwY+m+xI2gxgQkTTc/XnRLxxGNJMhDxJtMKch3cZcIylSz8foe90+H4huK5BS0wMcv+PWAJNeLlTR16LDP85opL+83UaWUSGWBTjwsAFzWncR5MESQvKPS70t1rFgOJ4IB3k6Ca5i0HKVAB1cUKcZTKOc91o9EIpR18g729fmrMbct8qCF24i4QKEaUPgPO/7ET0IgSkaNo4Y2JNYqZqXM/GsCZRkVtMxXQe6KiTkGQbj+AV13qYJtMCzgnDAWPmiKCzYbze0gyob+rDAa4S7Ja3Rsob5oHBhwpKhJlcXus/XgCaXJ+rnGW+LZf64gyoqUyMhWJZz0bOqrm58KdB5w8lvk6RpL7GN806qW4ljFZ49mO9TTSxSKRZw+FtOJWWs2+u8YJacAFCAXCOFpM6mROyIzQ+ExJFCXSPHm4fnSLLlcWN/b9B+NfiinPSrJ3Pz6oEFRHu6EFQWcjd8jZAT3WywvcE5AR10lxGpylrXiT9K0ZEbUeVu1eLsh6M15mAVp/+TgDmy0pHHAEMI+47if/U0VEgIX807iIpYt/xzL0aWtvQ=
     app: code-editor-react
 
 after_deploy:
