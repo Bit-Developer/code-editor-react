@@ -19,6 +19,7 @@ The Client is built with React and 3rd-party libraries, see below.
 
 # Demo
 Two available demos:
+* `Live Demo on Heroku:` <a href="https://code-editor-react.herokuapp.com/" target="\_blank">https://code-editor-react.herokuapp.com/</a>
 * `Live Demo on Netlify:` <a href="https://code-editor-react.netlify.com/" target="\_blank">https://code-editor-react.netlify.com/</a>
 * `Live Demo on Azure:` <a href="https://code-editor.azurewebsites.net/" target="\_blank">https://code-editor.azurewebsites.net/</a>
 
@@ -42,4 +43,4 @@ Follow tutorial [Continuously Deploy Full Stack React App to Heroku and Netlify 
 Read portfolio [Code Editor(React)](https://jojozhuang.github.io/project/code-editor-react/) to learn the main functions of this code editor.
 
 # Tutorial
-Read tutorial [Building Online Code Editor with React and Express](https://jojozhuang.github.io/tutorial/building-online-code-editor-with-react-and-express/) to learn how this online code editor is built.
+Read tutorial [Building Online Code Editor with React and Express](https://jojozhuang.github.io/tutorial/building-online-code-editor-with-react-and-express) to learn how this online code editor is built.
