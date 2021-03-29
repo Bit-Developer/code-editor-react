@@ -44,3 +44,19 @@ Read portfolio [Code Editor(React)](https://jojozhuang.github.io/project/code-ed
 
 # Tutorial
 Read tutorial [Building Online Code Editor with React and Express](https://jojozhuang.github.io/tutorial/building-online-code-editor-with-react-and-express) to learn how this online code editor is built.
+
+
+# Docker
+Build for production. All the compiled html files and js files will be generated in `dist`.
+```sh
+npm run build
+```
+Create image with nginx.
+```sh
+docker build -t jojozhuang/code-editor .
+```
+Create container.
+```sh
+docker run --name code-editor -p 9010:80 -d jojozhuang/code-editor
+```
+Access http://192.168.0.2:9010/ in browser.

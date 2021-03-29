@@ -6,12 +6,12 @@
   "scripts": {
     "start": "node src/server/index.js",
     "build": "webpack --env production",
-    "postinstall": "npm run build",
     "client": "PORT=3000 webpack-dev-server --env development --devtool inline-source-map --hot",
     "client-prod": "PORT=3001 webpack-dev-server",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "prod": "concurrently \"npm run server\" \"npm run client-prod\""
+    "prod": "concurrently \"npm run server\" \"npm run client-prod\"",
+    "start-prod": "PORT=9010 node src/server/index.js"
   },
   "author": {
     "name": "Rong Zhuang",
