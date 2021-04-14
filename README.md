@@ -51,12 +51,17 @@ Build for production. All the compiled html files and js files will be generated
 ```sh
 npm run build
 ```
-Create image with nginx.
+Create image with nginx for frontend.
 ```sh
-docker build -t jojozhuang/code-editor .
+docker build -t jojozhuang/code-editor-web .
+```
+Create image with node for backend.
+```sh
+docker build -t jojozhuang/code-editor-server . -f Dockerfile-server
 ```
 Create container.
 ```sh
-docker run --name code-editor -p 9010:80 -d jojozhuang/code-editor
+docker run --name code-editor-web -p 9010:80 -d jojozhuang/code-editor-web
+docker run --name code-editor-server -p 9011:80 -d jojozhuang/code-editor-server
 ```
 Access http://192.168.0.2:9010/ in browser.

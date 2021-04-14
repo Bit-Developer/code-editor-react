@@ -1,38 +1,31 @@
-# https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
-# https://medium.com/@VincentSchoener/development-of-nodejs-application-with-docker-and-typescript-part-2-4dd51c1e7766
+# Usage:
 #
-# Builder stage.
-# This state compile our TypeScript to get the JavaScript code
+#    Build image:
+#    docker build -t jojozhuang/code-editor-web .
 #
-#FROM node:15.12.0 AS builder
-
-#WORKDIR /usr/src/app
-
-#COPY package*.json ./
-#COPY webpack*.js ./
-#COPY .babelrc ./
-#COPY ./src ./src
-#COPY ./public ./public
-#RUN npm ci --quiet && npm run build
-
+#    Run image (on localhost:9010):
+#    docker run -d --name code-editor-web -p 9010:80 jojozhuang/code-editor-web
 #
-# Production stage.
-# This state compile get back the JavaScript code from builder stage
-# It will also install the production package only
-#
-FROM node:15.12.0-alpine
+#    Run image as virtual host (read more: https://github.com/nginx-proxy/nginx-proxy):
+#    docker run -e VIRTUAL_HOST=code-editor-web --name code-editor-web jojozhuang/code-editor-web
 
-WORKDIR /app
+# Stage 1, based on Node.js, to build and compile Angular
 
-# environment variables
-ENV PORT=80
+FROM node:15.12.0-alpine as builder
 
-COPY . .
-#COPY ./src ./build/src
-#RUN npm ci --quiet --only=production
+WORKDIR /react-app
 
-# We just need the build to execute the command
-#COPY --from=builder /usr/src/app ./build
+COPY package*.json webpack*.js .babelrc ./
+COPY ./src/client ./src/client
+COPY ./public ./public
 
-#CMD [ "node" "/build/src/server/index.js" ]
-CMD [ "node", "server.js" ]
+RUN npm ci --quiet && npm run build
+
+# Stage 2, based on Nginx, to have only the compiled app, ready for production with Nginx
+
+FROM nginx:1.19.8-alpine
+
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
+COPY --from=builder /react-app/dist /usr/share/nginx/html
