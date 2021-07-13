@@ -92,20 +92,26 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 exports.loadStatic = () => ({
   plugins: [
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin(
       {
-        from: './public/_redirects',
-        to: './_redirects',
-        toType: 'file',
-      },
-    ]),
-    new CopyWebpackPlugin([
+        patterns: [
+          {
+            from: './public/_redirects',
+            to: './_redirects',
+            toType: 'file',
+          },
+        ]
+      }),
+    new CopyWebpackPlugin(
       {
-        from: './public/web.config',
-        to: './web.config',
-        toType: 'file',
-      },
-    ]),
+        patterns: [
+          {
+            from: './public/web.config',
+            to: './web.config',
+            toType: 'file',
+          },
+        ]
+      }),
   ],
 });
 

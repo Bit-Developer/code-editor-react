@@ -14,7 +14,7 @@ class Editor extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(('env', process.env.NODE_ENV));
+    console.log(`env: ${process.env.NODE_ENV}`);
     if (process.env.NODE_ENV === 'production') {
       languages = languagesProd;
     }

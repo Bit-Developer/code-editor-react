@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/server/index.js",
     "build": "webpack --env production",
-    "client": "PORT=3000 webpack-dev-server --env development --devtool inline-source-map --hot",
-    "client-prod": "PORT=3001 webpack-dev-server",
+    "client": "PORT=3000 webpack serve --env development --devtool inline-source-map --hot",
+    "client-prod": "NODE_ENV=production PORT=3001 webpack serve",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "prod": "concurrently \"npm run server\" \"npm run client-prod\"",
@@ -34,8 +34,7 @@
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.8.6",
     "react-router-dom": "^4.3.1",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.33.0"
+    "url-loader": "^1.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -44,7 +43,7 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^3.6.1",
-    "copy-webpack-plugin": "^5.1.0",
+    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^2.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -54,11 +53,12 @@
     "fstream": "1.0.12",
     "glob": "^7.1.4",
     "html-webpack-plugin": "^3.2.0",
-    "lodash": "^4.17.15",
-    "nodemon": "^1.19.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.12",
     "style-loader": "^0.20.3",
-    "webpack-cli": "^3.3.3",
-    "webpack-dev-server": "^3.7.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^4.2.1"
   },
   "engines": {

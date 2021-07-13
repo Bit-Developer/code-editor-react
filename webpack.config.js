@@ -6,6 +6,7 @@ const path = require('path');
 const glob = require('glob');
 
 const parts = require('./webpack.parts');
+const webpack = require('webpack');
 
 const outputDirectory = 'dist';
 
@@ -33,6 +34,7 @@ const commonConfig = merge([
       ],
     },
     plugins: [
+      new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development') }),
       new CleanWebpackPlugin([outputDirectory]),
       new HtmlWebpackPlugin({
         title: 'Online Code Editor',
@@ -82,13 +84,14 @@ const developmentConfig = merge([
   parts.loadFonts(),
 ]);
 
-module.exports = (mode) => {
-  console.log(`mode:${mode}`);
-  if (mode === 'production') {
-    return merge(commonConfig, productionConfig, { mode });
+module.exports = (env) => {
+  console.log(`env:`)
+  console.log(env)
+  if (env.production === 'production') {
+    return merge(commonConfig, productionConfig );
   }
 
-  const dev = merge(commonConfig, developmentConfig, { mode });
+  const dev = merge(commonConfig, developmentConfig);
   console.log(dev);
   return dev;
 };
