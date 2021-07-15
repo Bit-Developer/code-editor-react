@@ -50,10 +50,10 @@ exports.extractCSS = ({ include, exclude, use }) => {
   };
 };
 
-const PurifyCSSPlugin = require('purifycss-webpack');
+const PurgeCSSPlugin = require('purgecss-webpack-plugin')
 
-exports.purifyCSS = ({ paths }) => ({
-  plugins: [new PurifyCSSPlugin({ paths })],
+exports.purgeCSS = ({ paths }) => ({
+  plugins: [new PurgeCSSPlugin({ paths })],
 });
 
 exports.loadImages = ({ include, exclude, options } = {}) => ({

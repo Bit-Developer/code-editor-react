@@ -51,7 +51,7 @@ const productionConfig = merge([
   parts.extractCSS({
     use: 'css-loader',
   }),
-  parts.purifyCSS({
+  parts.purgeCSS({
     paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true }),
   }),
   parts.loadImages({
@@ -87,10 +87,12 @@ const developmentConfig = merge([
 module.exports = (env) => {
   console.log(`env:`)
   console.log(env)
-  if (env.production === 'production') {
+  if (env.production === true) {
+    console.log("production")
     return merge(commonConfig, productionConfig );
   }
 
+  console.log("development")
   const dev = merge(commonConfig, developmentConfig);
   console.log(dev);
   return dev;
