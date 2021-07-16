@@ -40,7 +40,18 @@ Follow tutorial [Deploying Full Stack React App to Heroku](https://jojozhuang.gi
 Follow tutorial [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI](https://jojozhuang.github.io/tutorial/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci) to continuously deploy this Full Stack app to Heroku(RESTful API) and Netlify(Frontend React).
 
 ## Upgrade eo heorku20
+Server.
 ```sh
+cd code-editor-react
+heroku login
+heroku git:remote -a code-editor-api
+git commit --allow-empty -m "Upgrading to heroku-20"
+git push heroku master
+```
+
+Client.
+```sh
+cd code-editor-react
 heroku login
 heroku git:remote -a code-editor-react
 git commit --allow-empty -m "Upgrading to heroku-20"
