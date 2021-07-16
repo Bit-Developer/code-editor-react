@@ -46,7 +46,7 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
-  parts.loadEnv('http://code-editor-api.herokuapp.com'),
+  parts.loadEnv('https://code-editor-api.herokuapp.com'),
 
   parts.extractCSS({
     use: 'css-loader',
