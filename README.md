@@ -39,7 +39,34 @@ Follow tutorial [Deploying Full Stack React App to Heroku](https://jojozhuang.gi
 
 Follow tutorial [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI](https://jojozhuang.github.io/tutorial/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci) to continuously deploy this Full Stack app to Heroku(RESTful API) and Netlify(Frontend React).
 
-## Upgrade to heorku20 stack
+## Steps(Updated on July 18, 2021)
+Manually deploy the same git repo to two apps in heroku. Use `Multi Procfile buildpack` to deploy multiple apps in a monorepo.
+
+### Server
+Create app `code-editor-api` for backend api.
+```sh
+cd code-editor-react
+heroku login
+heroku create -a code-editor-api
+heroku buildpacks:add -a code-editor-api heroku-community/multi-procfile
+heroku buildpacks:add -a code-editor-api heroku/nodejs
+heroku config:set -a code-editor-api PROCFILE=src/server/Procfile
+git push https://git.heroku.com/code-editor-api.git HEAD:master
+```
+
+### Client
+Create app `code-editor-react` for client website.
+```sh
+cd code-editor-react
+heroku login
+heroku create -a code-editor-react
+heroku buildpacks:add -a code-editor-react heroku-community/multi-procfile
+heroku buildpacks:add -a code-editor-react heroku/nodejs
+heroku config:set -a code-editor-react PROCFILE=Procfile
+git push https://git.heroku.com/code-editor-react.git HEAD:master
+```
+
+## Update
 Server.
 ```sh
 cd code-editor-react

@@ -4,6 +4,8 @@
   "description": "Create an online code editor using React, Node.js, Express and Webpack.",
   "main": "src/server/index.js",
   "scripts": {
+    "heroku-server": "node src/server/index.js",
+    "heroku-client": "node server.js",
     "start": "node src/server/index.js",
     "build": "webpack --env production",
     "client": "PORT=3000 webpack serve --env development --devtool inline-source-map --hot",

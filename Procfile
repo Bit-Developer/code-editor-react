@@ -1,1 +1,1 @@
-web: node src/server/index.js
+web: npm run heroku-client
