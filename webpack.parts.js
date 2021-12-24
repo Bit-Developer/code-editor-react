@@ -1,13 +1,11 @@
 exports.devServer = ({ host, port } = {}) => ({
   devServer: {
-    stats: 'errors-only',
     host, // Defaults to `localhost`
     port, // Defaults to 8080
     open: true,
-    overlay: true,
     historyApiFallback: true,
     proxy: {
-      '/api': process.env.API_URL,
+      "/api": process.env.API_URL,
     },
   },
 });
@@ -20,18 +18,18 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
         include,
         exclude,
 
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
 });
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 exports.extractCSS = ({ include, exclude, use }) => {
   // Output extracted CSS to a file
   const plugin = new MiniCssExtractPlugin({
-    filename: './styles/[name].css',
+    filename: "./styles/[name].css",
   });
 
   return {
@@ -50,7 +48,7 @@ exports.extractCSS = ({ include, exclude, use }) => {
   };
 };
 
-const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+const PurgeCSSPlugin = require("purgecss-webpack-plugin");
 
 exports.purgeCSS = ({ paths }) => ({
   plugins: [new PurgeCSSPlugin({ paths })],
@@ -64,7 +62,7 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
         include,
         exclude,
         use: {
-          loader: 'url-loader',
+          loader: "url-loader",
           options,
         },
       },
@@ -80,7 +78,7 @@ exports.loadFonts = ({ include, exclude, options } = {}) => ({
         include,
         exclude,
         use: {
-          loader: 'url-loader',
+          loader: "url-loader",
           options,
         },
       },
@@ -88,39 +86,37 @@ exports.loadFonts = ({ include, exclude, options } = {}) => ({
   },
 });
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 exports.loadStatic = () => ({
   plugins: [
-    new CopyWebpackPlugin(
-      {
-        patterns: [
-          {
-            from: './public/_redirects',
-            to: './_redirects',
-            toType: 'file',
-          },
-        ]
-      }),
-    new CopyWebpackPlugin(
-      {
-        patterns: [
-          {
-            from: './public/web.config',
-            to: './web.config',
-            toType: 'file',
-          },
-        ]
-      }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "./public/_redirects",
+          to: "./_redirects",
+          toType: "file",
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "./public/web.config",
+          to: "./web.config",
+          toType: "file",
+        },
+      ],
+    }),
   ],
 });
 
-const webpack = require('webpack');
+const webpack = require("webpack");
 
-exports.loadEnv = url => ({
+exports.loadEnv = (url) => ({
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': {
+      "process.env": {
         API_URL: JSON.stringify(url),
       },
     }),
