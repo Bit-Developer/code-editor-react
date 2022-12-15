@@ -24,7 +24,7 @@
   "dependencies": {
     "body-parser": "^1.19.1",
     "bootstrap-select": "^1.13.10",
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "file-loader": "^1.1.11",
     "mem": "^8.1.1",
     "mkdirp": "^0.5.1",
