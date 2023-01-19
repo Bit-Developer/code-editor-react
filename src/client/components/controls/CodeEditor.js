@@ -1,16 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 // Import Brace and the AceEditor Component
-import brace from 'brace';
-import AceEditor from 'react-ace';
-// Import a Mode (language)
-import 'brace/mode/java';
-// Import a Theme (okadia, github, xcode etc)
-import 'brace/theme/github';
+import AceEditor from "react-ace";
 
 const editorStyle = {
-  border: '1px solid lightgray',
+  border: "1px solid lightgray",
 };
 
 class CodeEditor extends React.Component {

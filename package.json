@@ -29,7 +29,7 @@
     "mkdirp": "0.5.6",
     "prop-types": "15.8.1",
     "react": "16.14.0",
-    "react-ace": "6.6.0",
+    "react-ace": "10.1.0",
     "react-bootstrap": "0.33.1",
     "react-dom": "16.14.0",
     "react-router-dom": "4.3.1",
