@@ -7,5 +7,5 @@ ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-  document.getElementById('root'),
-);
+  document.getElementById('root')
+); // eslint-disable-line
